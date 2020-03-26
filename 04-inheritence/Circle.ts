@@ -13,8 +13,8 @@ export class Circle extends Shape {
         this._radius = value;
     }
 
-    public getArea(): number {
-        return 3.14159*this._radius*this._radius
+    calculateArea(): number {
+        return Math.PI * Math.pow(this._radius, 2);
     }
 
     public getCircumference(): number {
@@ -22,7 +22,7 @@ export class Circle extends Shape {
     }
 
     getInfo(): string {
-        return super.getInfo() + `, radius=${this._radius}, area=${this.getArea()}, circumference=${this.getCircumference()}`
+        return super.getInfo() + `, radius=${this._radius}, area=${this.calculateArea()}, circumference=${this.getCircumference()}`
     }
 
 }

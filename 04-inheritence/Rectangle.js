@@ -32,11 +32,11 @@ var Rectangle = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Rectangle.prototype.getArea = function () {
+    Rectangle.prototype.calculateArea = function () {
         return this._length * this._width;
     };
     Rectangle.prototype.getInfo = function () {
-        return _super.prototype.getInfo.call(this) + (", width=" + this._width + " length=" + this._length + " area=" + this.getArea());
+        return _super.prototype.getInfo.call(this) + (", width=" + this._width + " length=" + this._length + " area=" + this.calculateArea());
     };
     return Rectangle;
 }(Shape_1.Shape));

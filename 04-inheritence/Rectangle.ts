@@ -13,12 +13,12 @@ export class Rectangle extends Shape {
         this._width = value;
     }
 
-    public getArea(): number {
+    calculateArea(): number {
         return this._length * this._width;
     }
 
     getInfo(): string {
-        return super.getInfo() + `, width=${this._width} length=${this._length} area=${this.getArea()}`
+        return super.getInfo() + `, width=${this._width} length=${this._length} area=${this.calculateArea()}`
     }
 
 }

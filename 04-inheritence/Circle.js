@@ -31,14 +31,14 @@ var Circle = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Circle.prototype.getArea = function () {
-        return 3.14159 * this._radius * this._radius;
+    Circle.prototype.calculateArea = function () {
+        return Math.PI * Math.pow(this._radius, 2);
     };
     Circle.prototype.getCircumference = function () {
         return 2 * 3.14159 * this._radius;
     };
     Circle.prototype.getInfo = function () {
-        return _super.prototype.getInfo.call(this) + (", radius=" + this._radius + ", area=" + this.getArea() + ", circumference=" + this.getCircumference());
+        return _super.prototype.getInfo.call(this) + (", radius=" + this._radius + ", area=" + this.calculateArea() + ", circumference=" + this.getCircumference());
     };
     return Circle;
 }(Shape_1.Shape));
